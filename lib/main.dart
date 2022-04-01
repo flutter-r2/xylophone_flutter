@@ -19,71 +19,87 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.red,
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.red,
+                  ),
+                  onPressed: () {
+                    playSound(1);
+                  },
+                  child: const SizedBox(),
                 ),
-                onPressed: () {
-                  playSound(1);
-                },
-                child: const SizedBox(),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.orange,
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                  ),
+                  onPressed: () {
+                    playSound(2);
+                  },
+                  child: const SizedBox(),
                 ),
-                onPressed: () {
-                  playSound(2);
-                },
-                child: const SizedBox(),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.yellow,
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.yellow,
+                  ),
+                  onPressed: () {
+                    playSound(3);
+                  },
+                  child: const SizedBox(),
                 ),
-                onPressed: () {
-                  playSound(3);
-                },
-                child: const SizedBox(),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.green,
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green,
+                  ),
+                  onPressed: () {
+                    playSound(4);
+                  },
+                  child: const SizedBox(),
                 ),
-                onPressed: () {
-                  playSound(4);
-                },
-                child: const SizedBox(),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.teal,
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.teal,
+                  ),
+                  onPressed: () {
+                    playSound(5);
+                  },
+                  child: const SizedBox(),
                 ),
-                onPressed: () {
-                  playSound(5);
-                },
-                child: const SizedBox(),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                  ),
+                  onPressed: () {
+                    playSound(6);
+                  },
+                  child: const SizedBox(),
                 ),
-                onPressed: () {
-                  playSound(6);
-                },
-                child: const SizedBox(),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.purple,
+              Expanded(
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                  ),
+                  onPressed: () {
+                    playSound(7);
+                  },
+                  child: const SizedBox(),
                 ),
-                onPressed: () {
-                  playSound(7);
-                },
-                child: const SizedBox(),
               ),
             ],
           ),
