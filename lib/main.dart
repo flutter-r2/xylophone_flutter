@@ -13,6 +13,20 @@ class MyApp extends StatelessWidget {
     player.play('note$soundNumber.wav');
   }
 
+  Widget buildKey(int soundNumber, Color color) {
+    return Expanded(
+      child: TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor: color,
+        ),
+        onPressed: () {
+          playSound(soundNumber);
+        },
+        child: const SizedBox(),
+      ),
+    );
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -24,83 +38,13 @@ class MyApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.red,
-                  ),
-                  onPressed: () {
-                    playSound(1);
-                  },
-                  child: const SizedBox(),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.orange,
-                  ),
-                  onPressed: () {
-                    playSound(2);
-                  },
-                  child: const SizedBox(),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.yellow,
-                  ),
-                  onPressed: () {
-                    playSound(3);
-                  },
-                  child: const SizedBox(),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.green,
-                  ),
-                  onPressed: () {
-                    playSound(4);
-                  },
-                  child: const SizedBox(),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.teal,
-                  ),
-                  onPressed: () {
-                    playSound(5);
-                  },
-                  child: const SizedBox(),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                  ),
-                  onPressed: () {
-                    playSound(6);
-                  },
-                  child: const SizedBox(),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.purple,
-                  ),
-                  onPressed: () {
-                    playSound(7);
-                  },
-                  child: const SizedBox(),
-                ),
-              ),
+              buildKey(1, Colors.red),
+              buildKey(2, Colors.orange),
+              buildKey(3, Colors.yellow),
+              buildKey(4, Colors.green),
+              buildKey(5, Colors.teal),
+              buildKey(6, Colors.blue),
+              buildKey(7, Colors.purple),
             ],
           ),
         ),
